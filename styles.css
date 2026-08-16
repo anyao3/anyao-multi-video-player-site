@@ -41,7 +41,20 @@ th,td { padding:18px 22px; border-bottom:1px solid var(--line); }
 th { color:var(--violet); }
 tr:last-child td { border:0; }
 .plans .button { margin-top:22px; }
+.legal-note { margin:14px 0 0; color:var(--muted); font-size:13px; }
+.legal-note a,.legal a,.footer-links a:hover { color:var(--violet); }
 .download { display:flex; align-items:end; justify-content:space-between; gap:30px; padding:80px 44px; border:1px solid var(--line); border-radius:24px; background:linear-gradient(120deg,#17131e,#0e0e13); }
 .download h2 { margin-bottom:0; }
 footer { display:flex; justify-content:space-between; padding:40px 0 55px; color:var(--muted); }
-@media (max-width:800px) { nav { display:none; } .hero { min-height:auto; grid-template-columns:1fr; padding-top:70px; } .visual { width:min(480px,100%); margin:auto; } .showcase { padding-top:10px; } .showcase-copy p:last-child { font-size:16px; } .app-overview { border-radius:14px; } .cards { grid-template-columns:1fr; } .download { align-items:flex-start; flex-direction:column; padding:45px 25px; } }
+.footer-links { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:10px 22px; }
+.legal { width:min(900px,calc(100% - 40px)); margin:0 auto; padding:80px 0 120px; }
+.legal-intro { margin-bottom:55px; }
+.legal-intro h1 { font-size:clamp(44px,7vw,76px); }
+.legal-intro p,.legal-section p,.legal-section li { color:var(--muted); }
+.legal-toc { display:flex; flex-wrap:wrap; gap:10px; margin:30px 0 0; }
+.legal-toc a { padding:7px 13px; border:1px solid var(--line); border-radius:999px; color:var(--muted); font-size:13px; }
+.legal-section { padding:42px 0; border-top:1px solid var(--line); scroll-margin-top:85px; }
+.legal-section h2 { margin-bottom:24px; font-size:clamp(28px,4vw,42px); }
+.legal-section h3 { margin-top:28px; }
+.legal-section ul { padding-left:22px; }
+@media (max-width:800px) { nav { display:none; } .hero { min-height:auto; grid-template-columns:1fr; padding-top:70px; } .visual { width:min(480px,100%); margin:auto; } .showcase { padding-top:10px; } .showcase-copy p:last-child { font-size:16px; } .app-overview { border-radius:14px; } .cards { grid-template-columns:1fr; } .download { align-items:flex-start; flex-direction:column; padding:45px 25px; } footer { align-items:flex-start; flex-direction:column; gap:18px; } .footer-links { justify-content:flex-start; } .legal { padding-top:55px; } }
