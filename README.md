@@ -2,4 +2,4 @@
 
 This folder contains the product page for **Anyao Multi Video Player**.
 
-Before publishing, replace `OWNER` in `site-config.js` with the GitHub account or organization that owns `anyao-multi-video-player`. Then enable GitHub Pages using the `docs/` folder on the repository's default branch.
+The product links point to `https://github.com/anyao3/anyao-multi-video-player`. To publish the site with GitHub Pages, select the `main` branch and `/(root)` as the publishing source.
