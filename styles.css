@@ -74,11 +74,8 @@ tr:last-child td { border:0; }
 .laptop-base { width:150px; height:7px; border-radius:2px 2px 8px 8px; background:linear-gradient(90deg,#77737e,#c6c2ca 50%,#77737e); }
 .desktop .device-screen { width:132px; height:91px; }
 .monitor-stand { width:47px; height:19px; border-bottom:5px solid #8b8791; background:linear-gradient(90deg,transparent 17px,#8b8791 17px,#8b8791 30px,transparent 30px); }
-.chip-badge { position:absolute; z-index:2; right:13px; bottom:12px; padding:6px 9px; border:1px solid #ffffff22; border-radius:9px; background:#09090dcc; color:#d8c0f7; font-size:11px; font-weight:850; backdrop-filter:blur(8px); }
 .recommended { position:absolute; z-index:2; top:12px; right:12px; padding:5px 10px; border:1px solid #caa6ff55; border-radius:999px; background:#120d19cc; color:var(--violet); font-size:10px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; backdrop-filter:blur(8px); }
-.windows-symbol { position:absolute; z-index:2; right:13px; bottom:12px; display:grid; width:30px; height:30px; grid-template-columns:1fr 1fr; gap:2px; padding:5px; border:1px solid #ffffff22; border-radius:8px; background:#09090dcc; }
-.windows-symbol i { display:block; background:#74a9ef; }
-.download-card .platform { color:var(--violet); font-size:11px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+.download-card .platform { display:block; margin-bottom:3px; color:#d9bfff; font-size:15px; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
 .download-card h3 { margin:4px 0 6px; font-size:27px; letter-spacing:-.02em; }
 .download-card p { min-height:52px; margin:0; color:var(--muted); }
 .download-meta { display:flex; flex-wrap:wrap; gap:7px; }
