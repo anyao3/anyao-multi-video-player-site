@@ -43,6 +43,7 @@ h3 { margin:0 0 9px; font-size:20px; }
 .compatibility.best { border-color:#9a69df66; background:#8f61dc1f; color:var(--violet); }
 .compatibility.good { border-color:#5f89cb66; background:#477bd51c; color:#9fc5ff; }
 .compatibility.varies { border-color:#8b849566; background:#ffffff08; color:#aaa5b2; }
+.compatibility.unsupported { border-color:#bd637066; background:#9d39451c; color:#e59aa4; }
 .format-note { margin:16px 4px 0; color:var(--muted); font-size:13px; }
 .format-note strong { color:var(--text); }
 .plans { text-align:center; }
