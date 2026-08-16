@@ -6,6 +6,8 @@ The product links point to this public repository's Releases page. The applicati
 
 GitHub Pages publishes the site from the `main` branch and `/(root)`.
 
+Downloads and purchases are currently disabled while the Lemon Squeezy storefront is under review. When approval is complete, update the visible button labels/structured-data availability in `index.html`, then set `DOWNLOADS_ENABLED` and `PURCHASES_ENABLED` to `true` in `site-config.js`.
+
 ## Search metadata
 
 The canonical public URL is `https://anyao3.github.io/anyao-multi-video-player-site/`.

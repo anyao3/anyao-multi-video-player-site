@@ -14,6 +14,14 @@ h1 { margin:12px 0 22px; font-size:clamp(52px,7vw,92px); line-height:.96; letter
 h1 span { color:var(--violet); }
 .lead { max-width:640px; color:var(--muted); font-size:clamp(18px,2vw,23px); }
 .actions { display:flex; gap:12px; flex-wrap:wrap; margin:32px 0 13px; }
+.button.is-disabled,.download-cta.is-disabled { border-color:#ffffff12; background:#17151b; color:#76717c; box-shadow:none; cursor:not-allowed; pointer-events:none; }
+.button.is-disabled:hover,.download-cta.is-disabled:hover { border-color:#ffffff12; background:#17151b; transform:none; }
+.download-cta.is-disabled small { color:#625e68; }
+.download-cta.is-disabled svg { stroke:#625e68; }
+.featured .download-cta.is-disabled { border-color:#ffffff12; background:#201b24; color:#8d8495; }
+.featured .download-cta.is-disabled small,.featured .download-cta.is-disabled svg { color:#6d6574; stroke:#6d6574; }
+.availability-notice { display:flex; width:fit-content; max-width:600px; flex-direction:column; gap:3px; margin:17px 0; padding:11px 14px; border:1px solid #9b70c84a; border-radius:10px; background:#24182f8c; color:#aaa1b0; font-size:13px; line-height:1.45; }
+.availability-notice strong { color:#d8b9ff; }
 .button { display:inline-flex; min-height:50px; align-items:center; justify-content:center; padding:0 23px; border:1px solid var(--line); border-radius:12px; font-weight:750; transition:.2s; }
 .button:hover { transform:translateY(-2px); border-color:var(--violet); }
 .primary { color:#130e18; border:0; background:linear-gradient(135deg,#e0c7ff,var(--violet2)); }

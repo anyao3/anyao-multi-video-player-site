@@ -2,16 +2,32 @@ const MAC_ARM64_DOWNLOAD_URL = "https://github.com/anyao3/anyao-multi-video-play
 const MAC_X64_DOWNLOAD_URL = "https://github.com/anyao3/anyao-multi-video-player-site/releases/download/v0.3.3/Anyao.Multi.Video.Player-0.3.3-x64.dmg";
 const WINDOWS_DOWNLOAD_URL = "https://github.com/anyao3/anyao-multi-video-player-site/releases/download/v0.3.3/Anyao.Multi.Video.Player.Setup.0.3.3.exe";
 const CHECKOUT_URL = "https://anyao.lemonsqueezy.com/checkout/buy/0c60c071-38d3-4b6e-9963-ab38040d32fe";
+const DOWNLOADS_ENABLED = false;
+const PURCHASES_ENABLED = false;
 
-document.querySelectorAll(".download-mac-arm64").forEach((link) => { link.href = MAC_ARM64_DOWNLOAD_URL; });
-document.querySelectorAll(".download-mac-x64").forEach((link) => { link.href = MAC_X64_DOWNLOAD_URL; });
-document.querySelectorAll(".download-windows").forEach((link) => { link.href = WINDOWS_DOWNLOAD_URL; });
-document.querySelectorAll(".buy-link").forEach((link) => { link.href = CHECKOUT_URL; });
+const enableLinks = (selector, url) => document.querySelectorAll(selector).forEach((link) => {
+  link.href = url;
+  link.classList.remove("is-disabled");
+  link.removeAttribute("aria-disabled");
+});
+
+if (DOWNLOADS_ENABLED) {
+  enableLinks(".download-entry", "#download");
+  enableLinks(".download-mac-arm64", MAC_ARM64_DOWNLOAD_URL);
+  enableLinks(".download-mac-x64", MAC_X64_DOWNLOAD_URL);
+  enableLinks(".download-windows", WINDOWS_DOWNLOAD_URL);
+}
+if (PURCHASES_ENABLED) enableLinks(".buy-link", CHECKOUT_URL);
+
+document.querySelectorAll("[aria-disabled='true']").forEach((link) => {
+  link.addEventListener("click", (event) => event.preventDefault());
+});
 
 const macDialog = document.querySelector("#mac-download-dialog");
 const macDialogDownload = macDialog?.querySelector(".dialog-download");
 document.querySelectorAll(".download-mac-arm64, .download-mac-x64").forEach((link) => {
   link.addEventListener("click", (event) => {
+    if (!DOWNLOADS_ENABLED) return;
     if (!macDialog?.showModal || !macDialogDownload) return;
     event.preventDefault();
     macDialogDownload.href = link.href;
