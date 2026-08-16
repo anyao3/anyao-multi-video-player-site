@@ -2,4 +2,6 @@
 
 This folder contains the product page for **Anyao Multi Video Player**.
 
-The product links point to `https://github.com/anyao3/anyao-multi-video-player`. To publish the site with GitHub Pages, select the `main` branch and `/(root)` as the publishing source.
+The product links point to this public repository's Releases page. The application source code is maintained separately in a private repository and is not included here.
+
+GitHub Pages publishes the site from the `main` branch and `/(root)`.
