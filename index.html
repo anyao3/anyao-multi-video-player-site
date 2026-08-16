@@ -108,7 +108,10 @@
               <li>Open <strong>Terminal</strong>, paste the command below, and press Return.</li>
               <li>Open the app from Applications.</li>
             </ol>
-            <pre class="command"><code>xattr -dr com.apple.quarantine "/Applications/Anyao Multi Video Player.app"</code></pre>
+            <div class="command-block">
+              <pre class="command"><code id="setup-mac-command">xattr -dr com.apple.quarantine "/Applications/Anyao Multi Video Player.app"</code></pre>
+              <button type="button" class="command-copy-button" data-copy-target="setup-mac-command" aria-label="Copy Terminal command" title="Copy command"><span aria-hidden="true">⧉</span></button>
+            </div>
             <p class="note">Run this command only for a copy downloaded directly from this official page. It removes the macOS quarantine attribute from this app only.</p>
             <a class="text-link" href="https://support.apple.com/102445" target="_blank" rel="noreferrer">Read Apple's security guidance ↗</a>
           </div>
@@ -151,13 +154,13 @@
       <pre class="command"><code id="mac-command">xattr -dr com.apple.quarantine "/Applications/Anyao Multi Video Player.app"</code></pre>
       <p class="dialog-note">Only run this command for the app downloaded directly from this official page.</p>
       <div class="dialog-actions">
-        <button type="button" class="copy-command">Copy command</button>
+        <button type="button" class="copy-command" data-copy-target="mac-command">Copy command</button>
         <a class="dialog-download" href="#">Download DMG</a>
       </div>
       <a class="dialog-help" href="#setup">View full first-launch instructions ↓</a>
     </dialog>
 
     <footer><span>© 2026 Anyao Software</span><div class="footer-links"><a href="legal.html">Legal &amp; Support</a><a href="mailto:anyao.support@gmail.com">Contact</a></div></footer>
-    <script src="site-config.js?v=5"></script>
+    <script src="site-config.js?v=6"></script>
   </body>
 </html>

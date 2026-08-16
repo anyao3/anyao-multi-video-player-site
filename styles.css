@@ -101,7 +101,14 @@ tr:last-child td { border:0; }
 .setup-copy h3 + p { color:var(--muted); font-size:18px; }
 .setup-copy ol { margin:25px 0; padding-left:22px; }
 .setup-copy li { margin:10px 0; }
+.command-block { position:relative; margin:20px 0; }
+.command-block .command { margin:0; padding-right:58px; }
 .command { overflow-x:auto; margin:20px 0; padding:16px 18px; border:1px solid var(--line); border-radius:12px; background:#08090e; color:#e4d2ff; font-size:13px; line-height:1.5; text-align:left; }
+.command-copy-button { position:absolute; top:9px; right:9px; display:grid; width:38px; height:38px; place-items:center; padding:0; border:1px solid #ffffff24; border-radius:9px; background:#18151f; color:#d8b9ff; font-size:21px; line-height:1; cursor:pointer; transition:border-color .2s,background .2s,color .2s,transform .2s; }
+.command-copy-button:hover { border-color:var(--violet); background:#241b30; color:#fff; }
+.command-copy-button:focus-visible { outline:2px solid var(--violet); outline-offset:2px; }
+.command-copy-button:active { transform:scale(.94); }
+.command-copy-button.is-copied { border-color:#72d5aa; background:#123126; color:#8ee8be; }
 .text-link { color:var(--violet); font-weight:700; }
 .faq { scroll-margin-top:70px; }
 .faq-list { border-top:1px solid var(--line); }

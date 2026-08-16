@@ -25,14 +25,31 @@ macDialog?.addEventListener("click", (event) => {
   if (event.target === macDialog) macDialog.close();
 });
 
-const copyCommandButton = macDialog?.querySelector(".copy-command");
-copyCommandButton?.addEventListener("click", async () => {
-  const command = document.querySelector("#mac-command")?.textContent || "";
-  try {
-    await navigator.clipboard.writeText(command);
-    copyCommandButton.textContent = "Copied";
-    setTimeout(() => { copyCommandButton.textContent = "Copy command"; }, 1800);
-  } catch {
-    copyCommandButton.textContent = "Select and copy the command above";
-  }
+document.querySelectorAll("[data-copy-target]").forEach((button) => {
+  const originalContent = button.innerHTML;
+  const originalLabel = button.getAttribute("aria-label");
+  button.addEventListener("click", async () => {
+    const command = document.getElementById(button.dataset.copyTarget)?.textContent || "";
+    try {
+      await navigator.clipboard.writeText(command);
+      button.classList.add("is-copied");
+      button.innerHTML = button.classList.contains("command-copy-button") ? '<span aria-hidden="true">✓</span>' : "Copied";
+      button.setAttribute("aria-label", "Command copied");
+      button.title = "Copied";
+      setTimeout(() => {
+        button.classList.remove("is-copied");
+        button.innerHTML = originalContent;
+        if (originalLabel) button.setAttribute("aria-label", originalLabel);
+        else button.removeAttribute("aria-label");
+        button.title = "Copy command";
+      }, 1800);
+    } catch {
+      if (button.classList.contains("command-copy-button")) {
+        button.setAttribute("aria-label", "Copy failed. Select the command manually.");
+        button.title = "Copy failed — select the command manually";
+      } else {
+        button.textContent = "Select and copy the command above";
+      }
+    }
+  });
 });
