@@ -70,11 +70,11 @@ tr:last-child td { border:0; }
 .download-card p { min-height:52px; margin:0; color:var(--muted); }
 .download-meta { display:flex; flex-wrap:wrap; gap:7px; }
 .download-meta span { padding:5px 9px; border:1px solid #ffffff12; border-radius:7px; background:#ffffff08; color:#aaa5b2; font-size:11px; font-weight:700; }
-.download-cta { display:grid; min-height:64px; grid-template-columns:1fr auto; grid-template-rows:auto auto; align-items:center; margin-top:auto; padding:11px 15px 11px 17px; border:1px solid #ffffff1c; border-radius:14px; background:#ffffff0a; transition:.2s; }
+.download-cta { position:relative; display:flex; min-height:68px; align-items:center; justify-content:center; flex-direction:column; margin-top:auto; padding:11px 50px; border:1px solid #ffffff1c; border-radius:14px; background:#ffffff0a; text-align:center; transition:.2s; }
 .download-cta:hover { border-color:var(--violet); background:#ffffff10; }
-.download-cta > span { font-weight:800; }
-.download-cta small { color:#817c89; font-size:11px; }
-.download-cta svg { width:23px; height:23px; grid-column:2; grid-row:1 / 3; margin-left:16px; fill:none; stroke:var(--violet); stroke-linecap:round; stroke-linejoin:round; stroke-width:1.8; }
+.download-cta > span { font-size:18px; font-weight:800; line-height:1.2; }
+.download-cta small { margin-top:3px; color:#817c89; font-size:12px; }
+.download-cta svg { position:absolute; top:50%; right:17px; width:23px; height:23px; fill:none; stroke:var(--violet); stroke-linecap:round; stroke-linejoin:round; stroke-width:1.8; transform:translateY(-50%); }
 .featured .download-cta { color:#130e18; border-color:transparent; background:linear-gradient(135deg,#e0c7ff,var(--violet2)); }
 .featured .download-cta small { color:#362647; }
 .featured .download-cta svg { stroke:#362647; }
