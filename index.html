@@ -55,8 +55,6 @@
           <tr><td>Videos loaded at once</td><td>Up to 8</td><td>Unlimited*</td></tr>
           <tr><td>Layout</td><td>2 × 4</td><td>Custom rows and columns</td></tr>
           <tr><td>Playlists</td><td>Up to 10</td><td>Unlimited*</td></tr>
-          <tr><td>License</td><td>No activation required</td><td>Lifetime license</td></tr>
-          <tr><td>Active devices</td><td>—</td><td>Up to 5 at a time</td></tr>
         </tbody></table></div>
         <p class="note">*Subject to your computer's performance. Pro is a one-time purchase with a lifetime license for up to 5 active devices. Deactivate a device before moving the license to another device. Manual activation resets are not guaranteed.</p>
         <a class="button primary buy-link" href="#">Buy Pro on Lemon Squeezy</a>
@@ -87,6 +85,8 @@
               <li>Scroll to Security, click <strong>Open Anyway</strong>, then confirm <strong>Open</strong>.</li>
             </ol>
             <p class="note">Only override this warning for a copy downloaded from the official GitHub Releases page. The Open Anyway button is available for about one hour after a blocked launch attempt.</p>
+            <p>If macOS still reports that the app is damaged, open Terminal and remove the quarantine attribute from the copy in Applications:</p>
+            <pre class="command"><code>xattr -dr com.apple.quarantine "/Applications/Anyao Multi Video Player.app"</code></pre>
             <a class="text-link" href="https://support.apple.com/102445" target="_blank" rel="noreferrer">Read Apple's security guidance ↗</a>
           </div>
           <div class="setup-copy">
