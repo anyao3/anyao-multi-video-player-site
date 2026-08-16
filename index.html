@@ -6,7 +6,7 @@
     <meta name="description" content="Anyao Multi Video Player — a fast desktop player for viewing many videos at once." />
     <title>Anyao Multi Video Player</title>
     <link rel="icon" href="assets/app-icon.png" />
-    <link rel="stylesheet" href="styles.css?v=9" />
+    <link rel="stylesheet" href="styles.css?v=10" />
   </head>
   <body>
     <header class="nav">
@@ -142,7 +142,21 @@
       </section>
     </main>
 
+    <dialog class="mac-download-dialog" id="mac-download-dialog" aria-labelledby="mac-dialog-title">
+      <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+      <p class="eyebrow">BEFORE YOU INSTALL</p>
+      <h2 id="mac-dialog-title">One command may be required.</h2>
+      <p>Because this build is not notarized by Apple, macOS may say the app “is damaged.” After dragging the app into Applications, open Terminal and run:</p>
+      <pre class="command"><code id="mac-command">xattr -dr com.apple.quarantine "/Applications/Anyao Multi Video Player.app"</code></pre>
+      <p class="dialog-note">Only run this command for the app downloaded directly from this official page.</p>
+      <div class="dialog-actions">
+        <button type="button" class="copy-command">Copy command</button>
+        <a class="dialog-download" href="#">Download DMG</a>
+      </div>
+      <a class="dialog-help" href="#setup">View full first-launch instructions ↓</a>
+    </dialog>
+
     <footer><span>© 2026 Anyao Software</span><div class="footer-links"><a href="legal.html">Legal &amp; Support</a><a href="mailto:anyao.support@gmail.com">Contact</a><a class="repo-link" href="#">GitHub</a></div></footer>
-    <script src="site-config.js?v=3"></script>
+    <script src="site-config.js?v=4"></script>
   </body>
 </html>

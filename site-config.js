@@ -9,3 +9,32 @@ document.querySelectorAll(".download-mac-arm64").forEach((link) => { link.href =
 document.querySelectorAll(".download-mac-x64").forEach((link) => { link.href = MAC_X64_DOWNLOAD_URL; });
 document.querySelectorAll(".download-windows").forEach((link) => { link.href = WINDOWS_DOWNLOAD_URL; });
 document.querySelectorAll(".buy-link").forEach((link) => { link.href = CHECKOUT_URL; });
+
+const macDialog = document.querySelector("#mac-download-dialog");
+const macDialogDownload = macDialog?.querySelector(".dialog-download");
+document.querySelectorAll(".download-mac-arm64, .download-mac-x64").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (!macDialog?.showModal || !macDialogDownload) return;
+    event.preventDefault();
+    macDialogDownload.href = link.href;
+    macDialog.showModal();
+  });
+});
+
+macDialogDownload?.addEventListener("click", () => macDialog.close());
+macDialog?.querySelector(".dialog-help")?.addEventListener("click", () => macDialog.close());
+macDialog?.addEventListener("click", (event) => {
+  if (event.target === macDialog) macDialog.close();
+});
+
+const copyCommandButton = macDialog?.querySelector(".copy-command");
+copyCommandButton?.addEventListener("click", async () => {
+  const command = document.querySelector("#mac-command")?.textContent || "";
+  try {
+    await navigator.clipboard.writeText(command);
+    copyCommandButton.textContent = "Copied";
+    setTimeout(() => { copyCommandButton.textContent = "Copy command"; }, 1800);
+  } catch {
+    copyCommandButton.textContent = "Select and copy the command above";
+  }
+});

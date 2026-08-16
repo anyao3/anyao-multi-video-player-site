@@ -78,6 +78,17 @@ tr:last-child td { border:0; }
 .featured .download-cta { color:#130e18; border-color:transparent; background:linear-gradient(135deg,#e0c7ff,var(--violet2)); }
 .featured .download-cta small { color:#362647; }
 .featured .download-cta svg { stroke:#362647; }
+.mac-download-dialog { width:min(610px,calc(100% - 32px)); padding:34px; border:1px solid #9a69df77; border-radius:22px; background:linear-gradient(145deg,#1c1826,#0d0d13); color:var(--text); box-shadow:0 30px 100px #000c; }
+.mac-download-dialog::backdrop { background:#050509c9; backdrop-filter:blur(7px); }
+.mac-download-dialog h2 { margin:7px 35px 18px 0; font-size:clamp(30px,5vw,43px); }
+.mac-download-dialog > p:not(.eyebrow) { color:var(--muted); line-height:1.65; }
+.mac-download-dialog .dialog-note { font-size:12px; }
+.dialog-close { position:absolute; top:16px; right:17px; width:34px; height:34px; padding:0; border:1px solid var(--line); border-radius:50%; background:#ffffff08; color:var(--muted); font-size:23px; cursor:pointer; }
+.dialog-actions { display:flex; gap:10px; margin:24px 0 18px; }
+.dialog-actions button,.dialog-actions a { display:inline-flex; min-height:48px; align-items:center; justify-content:center; padding:10px 17px; border:1px solid #ffffff20; border-radius:11px; font:inherit; font-weight:800; cursor:pointer; }
+.copy-command { background:#ffffff08; color:var(--text); }
+.dialog-download { background:linear-gradient(135deg,#e0c7ff,var(--violet2)); color:#170e1c; }
+.dialog-help { color:var(--violet); font-size:13px; font-weight:700; }
 .setup-section { scroll-margin-top:70px; }
 .setup-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
 .setup-copy { padding:30px; border:1px solid var(--line); border-radius:18px; background:linear-gradient(145deg,#171621,#0e0e14); }
@@ -105,4 +116,4 @@ footer { display:flex; justify-content:space-between; padding:40px 0 55px; color
 .legal-section h2 { margin-bottom:24px; font-size:clamp(28px,4vw,42px); }
 .legal-section h3 { margin-top:28px; }
 .legal-section ul { padding-left:22px; }
-@media (max-width:800px) { nav { display:none; } .hero { min-height:auto; grid-template-columns:1fr; padding-top:70px; } .visual { width:min(480px,100%); margin:auto; } .showcase { padding-top:10px; } .showcase-copy p:last-child { font-size:16px; } .app-overview { border-radius:14px; } .cards,.download-grid,.setup-grid { grid-template-columns:1fr; } .formats-heading,.download-heading { align-items:flex-start; flex-direction:column; gap:0; } .formats-heading > p,.download-heading > p { margin:-25px 0 35px; text-align:left; } .download-card { min-height:280px; } .setup-copy { padding:24px; } footer { align-items:flex-start; flex-direction:column; gap:18px; } .footer-links { justify-content:flex-start; } .legal { padding-top:55px; } }
+@media (max-width:800px) { nav { display:none; } .hero { min-height:auto; grid-template-columns:1fr; padding-top:70px; } .visual { width:min(480px,100%); margin:auto; } .showcase { padding-top:10px; } .showcase-copy p:last-child { font-size:16px; } .app-overview { border-radius:14px; } .cards,.download-grid,.setup-grid { grid-template-columns:1fr; } .formats-heading,.download-heading { align-items:flex-start; flex-direction:column; gap:0; } .formats-heading > p,.download-heading > p { margin:-25px 0 35px; text-align:left; } .download-card { min-height:280px; } .mac-download-dialog { padding:26px 20px; } .dialog-actions { flex-direction:column; } .setup-copy { padding:24px; } footer { align-items:flex-start; flex-direction:column; gap:18px; } .footer-links { justify-content:flex-start; } .legal { padding-top:55px; } }
