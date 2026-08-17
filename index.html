@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Play multiple local videos at once in an adaptive grid. Download Anyao Multi Video Player free for Apple silicon, Intel Mac, and Windows 10/11." />
+    <meta name="description" content="Play multiple local videos at once with adaptive grids, per-video rotation and looping, saved playlists, and an always-on-top window. Free for Mac and Windows." />
     <meta name="google-site-verification" content="KfYocEQhTSIYEuigC1DOJLBaySNf2OdBuXuCEnFZq0U" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#08090c" />
@@ -16,7 +16,7 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Anyao Multi Video Player" />
     <meta property="og:title" content="Multi Video Player for Mac &amp; Windows | Anyao" />
-    <meta property="og:description" content="Play and compare multiple local videos at once in a flexible grid. Free download for macOS and Windows." />
+    <meta property="og:description" content="Compare multiple local videos with rotation, loop ranges, saved layouts, paging, and an always-on-top window." />
     <meta property="og:url" content="https://anyao3.github.io/anyao-multi-video-player-site/" />
     <meta property="og:image" content="https://anyao3.github.io/anyao-multi-video-player-site/assets/app-overview.png" />
     <meta property="og:image:width" content="1672" />
@@ -24,16 +24,16 @@
     <meta property="og:image:alt" content="Anyao Multi Video Player displaying several videos together in an adaptive grid" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Multi Video Player for Mac &amp; Windows | Anyao" />
-    <meta name="twitter:description" content="Play and compare multiple local videos at once in a flexible grid." />
+    <meta name="twitter:description" content="A local multi-video player with rotation, loop ranges, playlists, paging, and always-on-top PIN mode." />
     <meta name="twitter:image" content="https://anyao3.github.io/anyao-multi-video-player-site/assets/app-overview.png" />
     <meta name="twitter:image:alt" content="Anyao Multi Video Player displaying several videos together in an adaptive grid" />
-    <link rel="stylesheet" href="styles.css?v=12" />
+    <link rel="stylesheet" href="styles.css?v=13" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Anyao Multi Video Player",
-        "description": "A local-first desktop application for playing, comparing, arranging, and paging through multiple videos at once.",
+        "description": "A local-first desktop application for playing, comparing, rotating, looping, arranging, and paging through multiple videos at once.",
         "url": "https://anyao3.github.io/anyao-multi-video-player-site/",
         "image": "https://anyao3.github.io/anyao-multi-video-player-site/assets/app-overview.png",
         "screenshot": "https://anyao3.github.io/anyao-multi-video-player-site/assets/app-overview.png",
@@ -41,14 +41,14 @@
         "applicationSubCategory": "Video player",
         "operatingSystem": "macOS, Windows 10, Windows 11",
         "softwareVersion": "0.3.3",
-        "isAccessibleForFree": false,
+        "isAccessibleForFree": true,
         "offers": {
           "@type": "Offer",
           "name": "Free edition",
           "price": "0",
           "priceCurrency": "JPY",
           "url": "https://anyao3.github.io/anyao-multi-video-player-site/#download",
-          "availability": "https://schema.org/PreOrder"
+          "availability": "https://schema.org/InStock"
         },
         "featureList": [
           "Play multiple videos at once",
@@ -57,6 +57,9 @@
           "Automatic paging for large video sets",
           "Local playlists with thumbnails",
           "Per-video zoom and pan",
+          "Per-video 90-degree rotation",
+          "Per-video loop start and end points",
+          "Always-on-top PIN mode",
           "Local-first video processing"
         ],
         "author": {
@@ -105,6 +108,9 @@
           <article><h3>Saved playlists</h3><p>Recall video sets with thumbnails, ordering, layout, fit/fill, zoom, and position.</p></article>
           <article><h3>Fit or Fill</h3><p>Keep the complete frame or use every pixel. Zoom and pan individual videos when needed.</p></article>
           <article><h3>Built for scale</h3><p>Pro removes app limits so the practical ceiling is determined by your hardware.</p></article>
+          <article class="feature-highlight"><span class="feature-tag">PIN</span><h3>Always on top</h3><p>Keep the video wall above your other windows while you work, reference footage, or monitor several clips.</p></article>
+          <article class="feature-highlight"><span class="feature-tag">LOOP→ ←LOOP</span><h3>Loop the exact moment</h3><p>Set independent start and end points for each video to repeat only the scene you need to compare.</p></article>
+          <article class="feature-highlight"><span class="feature-tag">↶ 90° ↷</span><h3>Rotate each video</h3><p>Correct sideways footage independently with one-click left and right rotation—without changing the source file.</p></article>
           <article class="paging-feature"><div><h3>Automatic paging</h3><p>Videos beyond the maximum number per screen are automatically assigned to additional pages. Switch between every page using the centered controls at the bottom of the player.</p></div><div class="pager-demo" aria-label="Example page controls"><span aria-hidden="true">←</span><strong>Page 2 / 3</strong><span aria-hidden="true">→</span></div></article>
         </div>
       </section>
