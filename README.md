@@ -8,6 +8,8 @@ GitHub Pages publishes the site from the `main` branch and `/(root)`.
 
 Downloads are served from GitHub Releases. Pro purchases are processed by Polar; the public checkout and all download links are configured in `site-config.js`.
 
+The English homepage is served at `/` and the Japanese homepage at `/ja/`. On a first visit, `language.js` selects a page from the browser language. A language chosen from the header is stored locally and takes precedence on later visits. Both pages declare reciprocal `hreflang` links.
+
 ## Search metadata
 
 The canonical public URL is `https://anyao3.github.io/anyao-multi-video-player-site/`.
